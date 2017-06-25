@@ -1,0 +1,2 @@
+in: pown a2 a3
+out: ok
