@@ -32,8 +32,12 @@ int main()
 {
 	int moveCheck = 0;
 	string moveInput;
-	pieceInfo initializeBoard[] = { { "Black","Rook",{ 'a',8 } },{ "Black","Rook",{ 'h',8 } },{ "While","King",{ 'e',1 } } };
-	pieceInfo currentLocation[] = { { "Black","Rook",{ 'a',8 } },{ "Black","Rook",{ 'h',8 } },{ "While","King",{ 'e',1 } } };
+	pieceInfo initializeBoard[] = { { "Black","Rook",{ 'a',8 } },{ "Black","Rook",{ 'h',8 } },{ "While","King",{ 'e',1 } }
+			,{ "While","Pawn",{ 'a',2 } } ,{ "While","Pawn",{ 'b',2 } },{ "While","Pawn",{ 'c',2 } },{ "While","Pawn",{ 'd',2 } },{ "While","Pawn",{ 'e',2 } },{ "While","Pawn",{ 'f',2 } },{ "While","Pawn",{ 'g',2 } },{ "While","Pawn",{ 'h',2 } }
+,{ "Black","Pawn",{ 'a',7 } },{ "Black","Pawn",{ 'b',7 } },{ "Black","Pawn",{ 'c',7 } },{ "Black","Pawn",{ 'd',8 } },{ "Black","Pawn",{ 'e',9 } },{ "Black","Pawn",{ 'f',9 } },{ "Black","Pawn",{ 'g',7 } },{ "Black","Pawn",{ 'h',9 } }};
+	pieceInfo currentLocation[] = { { "Black","Rook",{ 'a',8 } },{ "Black","Rook",{ 'h',8 } },{ "While","King",{ 'e',1 } }
+			,{ "While","Pawn",{ 'a',2 } } ,{ "While","Pawn",{ 'b',2 } },{ "While","Pawn",{ 'c',2 } },{ "While","Pawn",{ 'd',2 } },{ "While","Pawn",{ 'e',2 } },{ "While","Pawn",{ 'f',2 } },{ "While","Pawn",{ 'g',2 } },{ "While","Pawn",{ 'h',2 } }
+,{ "Black","Pawn",{ 'a',7 } },{ "Black","Pawn",{ 'b',7 } },{ "Black","Pawn",{ 'c',7 } },{ "Black","Pawn",{ 'd',8 } },{ "Black","Pawn",{ 'e',9 } },{ "Black","Pawn",{ 'f',9 } },{ "Black","Pawn",{ 'g',7 } },{ "Black","Pawn",{ 'h',9 } }};
 	update newMove;
 	generateBoard(initializeBoard);
 	while (true)
@@ -81,6 +85,14 @@ void markPiece(pieceInfo allLocations[])
 		else if (allLocations[i].pieceName == "King")
 		{
 			cout << "K";
+		}
+		else if (allLocations[i].pieceName == "Pawn")
+		{
+			cout << "P";
+		}
+		else if (allLocations[i].pieceName == "Bishop")
+		{
+			cout << "B";
 		}
 	}
 	gotoXY(1, 30);
