@@ -32,8 +32,8 @@ int main()
 {
 	int moveCheck = 0;
 	string moveInput;
-	pieceInfo initializeBoard[] = { { "Black","Rook",{ 'a',8 } },{ "Black","Rook",{ 'h',8 } },{ "While","King",{ 'e',1 } } };
-	pieceInfo currentLocation[] = { { "Black","Rook",{ 'a',8 } },{ "Black","Rook",{ 'h',8 } },{ "While","King",{ 'e',1 } } };
+	pieceInfo initializeBoard[] = { { "Black","Rook",{ 'a',8 } },{ "Black","Rook",{ 'h',8 } },{ "White","King",{ 'e',1 } } };
+	pieceInfo currentLocation[] = { { "Black","Rook",{ 'a',8 } },{ "Black","Rook",{ 'h',8 } },{ "White","King",{ 'e',1 } } };
 	update newMove;
 	generateBoard(initializeBoard);
 	while (true)
@@ -46,7 +46,6 @@ int main()
 		{
 			cout << "WHITE MOVES :- ";
 		}
-	//	cin >> moveInput;
 		cin >> moveInput;
 		newMove.initial.x = moveInput[0];
 		newMove.initial.y = moveInput[1] - '0';
