@@ -50,7 +50,6 @@ int main()
 		{
 			cout << "WHITE MOVES :- ";
 		}
-	//	cin >> moveInput;
 		cin >> moveInput;
 		newMove.initial.x = moveInput[0];
 		newMove.initial.y = moveInput[1] - '0';
