@@ -1,0 +1,2 @@
+in: pown e2 e4
+out: ok
