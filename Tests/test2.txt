@@ -1,0 +1,2 @@
+in: pown e1 e5
+out: err
